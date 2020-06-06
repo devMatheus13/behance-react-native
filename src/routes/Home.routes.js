@@ -45,10 +45,11 @@ const Routes = () => {
       screenOptions={({ route, navigation }) => ({
         tabBarIcon: ({ color, size }) => {
           const { lib: Icon, name } = icons[route.name];
-          return <Icon name={name} size={size} color={color} style={{marginTop:15}} />;
+          return <Icon name={name} size={32} color={color} style={{marginTop:15}} />;
         },
       })}
       tabBarOptions={{
+
         activeTintColor: "#0059ff",
         inactiveTintColor: "#000",
         

@@ -5,7 +5,7 @@ import * as Animatable from 'react-native-animatable'
 
 
 const AnimatedBack = Animatable.createAnimatableComponent(Background)
-const CardList = () => {
+const CardList = ({root}) => {
 
   const TouchRef = useRef();
 
@@ -24,10 +24,13 @@ const CardList = () => {
          <SubTitle>Beautiful models </SubTitle>
        </Header>
        <Footer>
-         <FooterButton>
+       {root ? <FooterText></FooterText>  :<FooterButton>
              <FooterText>Recomendado para você</FooterText>
-         </FooterButton>
+         </FooterButton> }
+         
        </Footer>
+      
+      
          </AnimatedBack>
       
     </Container>
